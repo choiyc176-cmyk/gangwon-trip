@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:title" content="강원도 2박3일 일정"><meta property="og:description" content="10/9~10/11 일차별 일정 · 식당 · 금강굴 코스">
+<title>강원 2박3일 일정</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+:root{
+  --bg:#eef2f4; --surface:#ffffff; --ink:#14232c; --muted:#5b6b75; --line:#d5dde2;
+  --accent:#0b6e7f; --accent-ink:#ffffff; --warm:#c2410c; --warm-bg:#fdeee4;
+  --soft:#e1ecef; --track:#9fb3bc; --good:#2f7d4f;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1a20; --surface:#17262e; --ink:#e7eef1; --muted:#98aab3; --line:#2a3e48;
+  --accent:#4fc1d4; --accent-ink:#06222a; --warm:#ffa370; --warm-bg:#3a2418;
+  --soft:#1f3640; --track:#587280; --good:#6fcf97; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1a20; --surface:#17262e; --ink:#e7eef1; --muted:#98aab3; --line:#2a3e48;
+  --accent:#4fc1d4; --accent-ink:#06222a; --warm:#ffa370; --warm-bg:#3a2418;
+  --soft:#1f3640; --track:#587280; --good:#6fcf97; color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Noto Sans KR',system-ui,sans-serif;line-height:1.55;padding-inline:16px;padding-block:0 40px}
+.wrap{max-width:640px;margin:0 auto}
+header{padding-block:22px 12px}
+.kicker{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;color:var(--accent);font-weight:600}
+h1{font-size:26px;line-height:1.25;margin:4px 0 6px;font-weight:900;text-wrap:balance}
+.meta{color:var(--muted);font-size:13px;margin:0}
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding-block:8px;border-bottom:1px solid var(--line)}
+.tab{font:inherit;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:10px;padding:8px 4px;cursor:pointer;text-align:center;line-height:1.25}
+.tab b{display:block;font-size:15px}
+.tab span{font-size:11px;color:var(--muted)}
+.tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.tab[aria-selected="true"] span{color:var(--accent-ink);opacity:.85}
+.dayhead{margin:18px 0 6px}
+.dayhead h2{font-size:19px;margin:0;font-weight:800}
+.dayhead p{margin:2px 0 0;color:var(--muted);font-size:13px}
+ol.tl{list-style:none;margin:0;padding:0}
+.row{display:grid;grid-template-columns:62px minmax(0,1fr);gap:10px;padding-block:10px;border-bottom:1px dashed var(--line)}
+.time{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);line-height:1.35;font-variant-numeric:tabular-nums}
+.time small{display:block;color:var(--muted);font-weight:500;font-size:11px}
+.title{font-weight:700;font-size:15px;margin:0}
+.note{margin:2px 0 0;color:var(--muted);font-size:13px}
+.tag{display:inline-block;font-size:11px;font-weight:700;padding:1px 7px;border-radius:99px;margin-right:6px;vertical-align:1px;background:var(--soft);color:var(--accent)}
+.tag.eat{background:var(--warm-bg);color:var(--warm)}
+.card{margin-top:8px;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:12px}
+.card.food{border-left:4px solid var(--warm)}
+.card h3{margin:0 0 4px;font-size:15px}
+.kv{display:grid;grid-template-columns:auto minmax(0,1fr);gap:2px 10px;font-size:13px;margin:6px 0}
+.kv dt{color:var(--muted)} .kv dd{margin:0}
+.menu{list-style:none;padding:0;margin:6px 0;font-size:13px}
+.menu li{display:flex;justify-content:space-between;gap:10px;padding:3px 0;border-bottom:1px dotted var(--line)}
+.menu li span:last-child{font-variant-numeric:tabular-nums;white-space:nowrap}
+.cost{font-size:13px;margin:6px 0 0;font-weight:700;color:var(--warm)}
+.btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.btn{font:inherit;font-size:13px;font-weight:500;text-decoration:none;color:var(--accent);background:var(--soft);border:0;border-radius:8px;padding:7px 10px;cursor:pointer}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.tel{font-family:'IBM Plex Mono',monospace;user-select:all}
+.trailbtn{margin-top:8px}
+.trail{margin-top:8px;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:10px}
+.trail svg{display:block;width:100%;height:auto}
+.svgwrap{overflow-x:auto}
+.legend{font-size:12px;color:var(--muted);margin:6px 0 0}
+table.ct{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+table.ct th,table.ct td{text-align:left;padding:5px 4px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+table.ct th{color:var(--muted);font-weight:500}
+.warn{margin-top:14px;padding:12px;border-radius:12px;background:var(--warm-bg);font-size:13px}
+.warn b{color:var(--warm)}
+.warn ul{margin:6px 0 0;padding-left:18px}
+footer{margin-top:22px;color:var(--muted);font-size:12px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
+
+</head><body><div class="wrap">
+<header>
+  <div class="kicker">2026.10.9 금 – 10.11 일 · 5인</div>
+  <h1>강원도 2박3일 일정</h1>
+  <p class="meta">월정사 → 고성 그랜드 켄싱턴 설악비치 → 설악산 금강굴 · 속초 · 양양</p>
+</header>
+
+<nav class="tabs" role="tablist" aria-label="일차 선택">
+  <button class="tab" role="tab" id="t1" data-d="1"><b>1일차</b><span>10/9 금 · 월정사</span></button>
+  <button class="tab" role="tab" id="t2" data-d="2"><b>2일차</b><span>10/10 토 · 금강굴</span></button>
+  <button class="tab" role="tab" id="t3" data-d="3"><b>3일차</b><span>10/11 일 · 귀가</span></button>
+</nav>
+
+<main id="panel" role="tabpanel"></main>
+
+<div class="warn">
+  <b>출발 전 확인</b>
+  <ul>
+    <li>음주 후 입수·사우나 금지. 풀은 저녁 식사 전에</li>
+    <li>비 오면 금강굴은 생략하고 비선대까지만</li>
+    <li>영순네횟집 예약 필수 · 선영이네 마감·가격은 전화 확인</li>
+    <li>모든 가격·영업시간은 변동될 수 있음</li>
+  </ul>
+</div>
+<footer>가격은 메뉴 조사 시점 기준 추정치입니다. 이동시간은 교통상황에 따라 달라집니다.</footer>
+</div>
+
+<script>
+var N=encodeURIComponent;
+function links(name,q){q=q||name;return [
+ ['네이버지도','https://map.naver.com/p/search/'+N(q),1],
+ ['카카오맵','https://map.kakao.com/?q='+N(q)],
+ ['블로그 후기','https://search.naver.com/search.naver?where=blog&query='+N(q+' 후기')],
+ ['다이닝코드','https://www.diningcode.com/list.dc?query='+N(name)]
+];}
+var D={
+1:{h:'1일차 · 10/9 금 (한글날)',s:'월정사 집결 → 전나무숲길 → 숙소 → 온수풀 → 회',rows:[
+ {t:'08:00',t2:'~10:00',ti:'각자 출발',n:'서울 기준 약 3시간, 정체 시 +1시간'},
+ {t:'11:30',ti:'월정사 입구 먹거리마을 집결',n:'각자 자차로 도착'},
+ {t:'11:40',t2:'~12:40',tag:'점심',ti:'오대산 민속식당',n:'산채정식 중심의 산나물 밥집',r:{name:'오대산 민속식당',q:'오대산 민속식당 월정사',tel:'033-333-4497',menu:[['산채정식','22,000'],['곤드레나물밥정식','25,000'],['황태국백반','13,000'],['감자전','12,000']],cost:'5명 약 11~13만원',note:'곤드레밥은 소진될 수 있음'}},
+ {t:'12:50',ti:'월정사 주차장으로 이동',n:'주차료 승용차 약 3,000원'},
+ {t:'13:00',t2:'~14:20',tag:'산책',ti:'월정사 · 전나무숲길',n:'왕복 약 2km, 약 1시간 20분',steps:['주차장','월정사 경내 · 팔각구층석탑','금강교','전나무숲길 약 1km','일주문','주차장']},
+ {t:'14:30',ti:'숙소로 출발',n:'약 1시간 30~40분'},
+ {t:'16:10',ti:'그랜드 켄싱턴 체크인',n:'고성군 토성면 봉포리 40-30 일대'},
+ {t:'16:40',t2:'~17:40',tag:'휴식',ti:'야외 온수풀 · 사우나',n:'술 마시기 전에. 수영복 지참'},
+ {t:'18:00',t2:'~20:30',tag:'저녁',ti:'영순네횟집',n:'숙소에서 걸어서 이동',r:{name:'영순네횟집',q:'영순네횟집 봉포해변길',tel:'033-633-8887',addr:'고성군 봉포해변길 99',hours:'브레이크 15:00~16:30 · 주문마감 20:00 · 마감 21:30',menu:[['물회','20,000'],['특물회','24,000'],['회덮밥','17,000'],['오징어순대','15,000'],['매운탕 소/대','40,000 / 70,000'],['모둠회 소 (2~3인)','100,000']],cost:'5명 약 25~35만원 추정',note:'예약 필수'}},
+ {t:'20:30',t2:'~',ti:'숙소에서 2차',n:'취침은 내일 산행 생각해서 적당히'}
+]},
+2:{h:'2일차 · 10/10 토',s:'설악산 금강굴 → 속초중앙시장 → 선영이네물회',rows:[
+ {t:'08:00',ti:'기상'},
+ {t:'08:50',ti:'숙소 출발',n:'운전자 금주 또는 택시 이용'},
+ {t:'09:20',t2:'~10:00',tag:'아침',ti:'시골할머니',n:'순두부·청국장·나물 정식',r:{name:'시골할머니',q:'시골할머니 속초',hours:'08:00~21:00',menu:[['초당순두부','10,000'],['청국장','10,000'],['황태구이정식','18,000'],['곤드레돌솥밥','15,000'],['강원나물밥정식','25,000']],cost:'1인 1~2만원대',note:'정확한 위치는 출발 전 지도에서 확인'}},
+ {t:'10:05',ti:'설악동 소공원 도착',n:'만차 시 사설주차장 또는 시내버스 7번'},
+ {t:'10:15',t2:'~12:40',tag:'등산',ti:'금강굴 코스',n:'소공원 → 신흥사 → 비선대 → 금강굴',trail:1},
+ {t:'12:40',t2:'~14:20',ti:'하산',n:'금강굴 → 비선대 → 소공원'},
+ {t:'14:30',ti:'속초중앙시장으로 이동',n:'약 25~30분'},
+ {t:'15:00',t2:'~15:50',tag:'점심',ti:'신토불이 감자옹심이',n:'시장 건물 1층 55호',r:{name:'신토불이 감자옹심이',q:'신토불이감자옹심이 속초중앙시장',tel:'033-633-9432',hours:'수요일 휴무 · 16:00 브레이크',menu:[['전통옹심이','12,000'],['들깨옹심이','14,000'],['감자전','10,000'],['오징어순대','16,000']],cost:'5명 약 8~9만원'}},
+ {t:'15:50',t2:'~17:00',tag:'쇼핑',ti:'중앙시장 장보기',n:'밤에 먹을 간식 구입',shop:[['현태네튀김','오징어튀김 + 누룽지오징어순대 세트 17,000 · 목 휴무','현태네튀김 속초중앙시장'],['중앙닭강정 본점','09:30~19:30','중앙닭강정 본점 속초'],['강원도막걸리술빵','술빵','강원도막걸리술빵 속초중앙시장'],['마른오징어','시장 건어물 가게','속초중앙시장 마른오징어']]},
+ {t:'17:00',ti:'숙소로 출발',n:'약 35분'},
+ {t:'18:00',t2:'~20:10',tag:'저녁',ti:'선영이네물회',n:'20:15까지 식사 마무리',r:{name:'선영이네물회',q:'선영이네물회 토성로 75',tel:'050-4458-1590',addr:'고성군 토성면 토성로 75',hours:'브레이크 16:00~17:30 · 화 휴무 · 마감 20:50',menu:[['물회류','가격 미확인 — 전화 문의']],cost:'방문 전 가격 확인 권장'}},
+ {t:'20:15',ti:'대리운전 호출',n:'조기 호출 권장'},
+ {t:'20:30',t2:'~',ti:'시장 음식으로 숙소 2차'}
+]},
+3:{h:'3일차 · 10/11 일',s:'속초 사돈집 → 양양 바다 카페 → 귀가',rows:[
+ {t:'09:00',ti:'기상'},
+ {t:'09:40',ti:'체크아웃 · 사돈집으로 출발'},
+ {t:'10:10',t2:'~11:20',tag:'아점',ti:'속초 사돈집',n:'물곰탕 · 가자미조림',r:{name:'속초 사돈집',q:'속초 사돈집 영랑해안1길 8',tel:'033-633-0915',addr:'속초시 영랑해안1길 8',hours:'08:00~15:00 · 목 휴무',menu:[['물곰탕','시가'],['가자미조림','18,000 (과거 기준)']],cost:'1인 약 2만원대',note:'전화 예약 권장 · 등대해수욕장 쪽 공영주차장'}},
+ {t:'11:20',ti:'양양으로 이동',n:'약 30분 (22~25km)'},
+ {t:'11:50',t2:'~12:50',tag:'카페',ti:'파스쿠찌 양양클리프비치점',n:'바다 전망은 도착 후 확인',r:{name:'파스쿠찌 양양클리프비치점',q:'파스쿠찌 양양클리프비치점',tel:'033-670-3000',addr:'양양군 손양면 선사유적로 359',hours:'09:00~20:00 · 주차 가능',menu:[]}},
+ {t:'13:00',ti:'귀가 출발',n:'일요일 정체 예상'}
+]}};
+
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function copyTxt(txt,btn){
+  var done=function(){var o=btn.textContent;btn.textContent='복사됨';setTimeout(function(){btn.textContent=o},1400)};
+  var fb=function(){var r=document.createRange(),el=btn.previousElementSibling;r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='선택됨 · 길게 눌러 복사';};
+  try{navigator.clipboard.writeText(txt).then(done,fb)}catch(e){fb()}
+}
+function restCard(r){
+  var h='<div class="card food"><h3>'+esc(r.name)+'</h3><dl class="kv">';
+  if(r.addr)h+='<dt>주소</dt><dd>'+esc(r.addr)+'</dd>';
+  if(r.hours)h+='<dt>영업</dt><dd>'+esc(r.hours)+'</dd>';
+  if(r.tel)h+='<dt>전화</dt><dd><span class="tel">'+esc(r.tel)+'</span> <button class="btn" data-copy="'+esc(r.tel)+'" type="button">복사</button></dd>';
+  h+='</dl>';
+  if(r.menu&&r.menu.length){h+='<ul class="menu">'+r.menu.map(function(m){return '<li><span>'+esc(m[0])+'</span><span>'+esc(m[1])+'</span></li>'}).join('')+'</ul>'}
+  if(r.cost)h+='<p class="cost">'+esc(r.cost)+'</p>';
+  if(r.note)h+='<p class="note">'+esc(r.note)+'</p>';
+  h+='<div class="btns">'+links(r.name,r.q).map(function(l){return '<a class="btn'+(l[2]?' primary':'')+'" href="'+l[1]+'" target="_blank" rel="noopener">'+l[0]+'</a>'}).join('')+'</div></div>';
+  return h;
+}
+function shopCard(s){
+  return '<div class="card"><ul class="menu">'+s.map(function(x){return '<li><span><a href="https://map.naver.com/p/search/'+N(x[2])+'" target="_blank" rel="noopener" style="color:var(--accent)">'+esc(x[0])+'</a></span><span style="white-space:normal;text-align:right">'+esc(x[1])+'</span></li>'}).join('')+'</ul></div>';
+}
+function steps(a){return '<div class="card"><p class="note" style="margin:0">'+a.map(esc).join(' → ')+'</p></div>'}
+var TRAIL='<div class="trail"><div class="svgwrap"><svg viewBox="0 0 520 250" role="img" aria-label="금강굴 코스 개념도: 소공원에서 비선대 3.0km, 비선대에서 금강굴 0.6km">'+
+'<line x1="30" y1="190" x2="490" y2="190" stroke="var(--line)" stroke-width="1"/>'+
+'<path d="M30 190 L110 178 L190 170 L270 158 L350 146 L398 138 L470 52" fill="none" stroke="var(--accent)" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>'+
+'<path d="M398 138 L470 52" fill="none" stroke="var(--warm)" stroke-width="4" stroke-dasharray="2 6" stroke-linecap="round"/>'+
+'<circle cx="30" cy="190" r="7" fill="var(--accent)"/><circle cx="398" cy="138" r="7" fill="var(--accent)"/><circle cx="470" cy="52" r="8" fill="var(--warm)"/>'+
+'<circle cx="190" cy="170" r="5" fill="var(--surface)" stroke="var(--accent)" stroke-width="3"/>'+
+'<g font-family="Noto Sans KR,sans-serif" fill="var(--ink)" font-size="13" font-weight="700">'+
+'<text x="30" y="214" text-anchor="start">소공원</text><text x="190" y="194" text-anchor="middle">신흥사 경유</text><text x="398" y="162" text-anchor="middle">비선대</text><text x="470" y="34" text-anchor="end">금강굴</text></g>'+
+'<g font-family="IBM Plex Mono,monospace" fill="var(--muted)" font-size="12">'+
+'<text x="30" y="230">0 km</text><text x="398" y="178" text-anchor="middle">3.0 km</text><text x="470" y="72" text-anchor="end">3.6 km · 해발 약 600m</text>'+
+'<text x="214" y="132" text-anchor="middle">완만한 길 · 편도 1h~1h20</text><text x="430" y="100" text-anchor="start" fill="var(--warm)">급경사 철계단</text><text x="430" y="114" text-anchor="start" fill="var(--warm)">약 40분</text></g>'+
+'</svg></div><p class="legend">개념도(고도·거리 비례 아님). 비선대부터 금강굴까지가 이 코스의 핵심 구간입니다.</p>'+
+'<table class="ct"><tr><th>구간</th><th>거리</th><th>소요</th></tr>'+
+'<tr><td>소공원 → 비선대</td><td>3.0km</td><td>1h~1h20</td></tr>'+
+'<tr><td>비선대 → 금강굴</td><td>0.6km</td><td>약 40분</td></tr>'+
+'<tr><td>소공원 → 금강굴 (편도)</td><td>3.6km</td><td>약 2h</td></tr>'+
+'<tr><td>왕복 (체류 포함)</td><td>7.2km</td><td>약 4h</td></tr></table>'+
+'<p class="legend">10월 비선대 입산 통제 14:00. 비 오면 비선대까지만. 금강굴은 원효 수행 전설이 있는 천연 동굴입니다.</p></div>';
+
+function render(d){
+  var x=D[d],h='<div class="dayhead"><h2>'+x.h+'</h2><p>'+x.s+'</p></div><ol class="tl">';
+  x.rows.forEach(function(r,i){
+    h+='<li class="row"><div class="time">'+r.t+(r.t2?'<small>'+r.t2+'</small>':'')+'</div><div style="min-width:0">'+
+    '<p class="title">'+(r.tag?'<span class="tag'+(r.r&&r.tag!='카페'?' eat':'')+'">'+r.tag+'</span>':'')+esc(r.ti)+'</p>'+(r.n?'<p class="note">'+esc(r.n)+'</p>':'');
+    if(r.r)h+=restCard(r.r);
+    if(r.shop)h+=shopCard(r.shop);
+    if(r.steps)h+=steps(r.steps);
+    if(r.trail)h+='<button class="btn primary trailbtn" type="button" aria-expanded="false" data-trail="1">등산로 코스 보기</button><div hidden data-tbox></div>';
+    h+='</div></li>';
+  });
+  document.getElementById('panel').innerHTML=h+'</ol>';
+}
+function show(d,push){
+  [1,2,3].forEach(function(i){var t=document.getElementById('t'+i);t.setAttribute('aria-selected',i==d)});
+  render(d);
+  if(push){try{history.replaceState(null,'','#day'+d)}catch(e){location.hash='day'+d}}
+  scrollTo(0,0);
+}
+document.addEventListener('click',function(e){
+  var t=e.target.closest('.tab');if(t){show(+t.dataset.d,1);return}
+  var c=e.target.closest('[data-copy]');if(c){copyTxt(c.dataset.copy,c);return}
+  var b=e.target.closest('[data-trail]');if(b){
+    var box=b.nextElementSibling,open=box.hidden;
+    if(open&&!box.innerHTML)box.innerHTML=TRAIL;
+    box.hidden=!open;b.setAttribute('aria-expanded',open);b.textContent=open?'등산로 코스 닫기':'등산로 코스 보기';
+  }
+});
+var m=/day([123])/.exec(location.hash);show(m?+m[1]:1,0);
+addEventListener('hashchange',function(){var m=/day([123])/.exec(location.hash);if(m)show(+m[1],0)});
+</script>
+
+</body></html>
