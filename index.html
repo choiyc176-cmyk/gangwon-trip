@@ -55,7 +55,7 @@ ol.tl{list-style:none;margin:0;padding:0}
 .tel{font-family:'IBM Plex Mono',monospace;user-select:all}
 .trailbtn{margin-top:8px}
 .trail{margin-top:8px;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:10px}
-.trail svg{display:block;width:100%;height:auto}
+.trail svg{display:block;width:100%;min-width:520px;height:auto}
 .svgwrap{overflow-x:auto}
 .legend{font-size:12px;color:var(--muted);margin:6px 0 0}
 table.ct{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
@@ -116,17 +116,19 @@ var D={
  {t:'18:00',t2:'~20:30',tag:'저녁',ti:'영순네횟집',n:'숙소에서 걸어서 이동',r:{name:'영순네횟집',q:'영순네횟집 봉포해변길',tel:'033-633-8887',addr:'고성군 봉포해변길 99',hours:'브레이크 15:00~16:30 · 주문마감 20:00 · 마감 21:30',menu:[['물회','20,000'],['특물회','24,000'],['회덮밥','17,000'],['오징어순대','15,000'],['매운탕 소/대','40,000 / 70,000'],['모둠회 소 (2~3인)','100,000']],cost:'5명 약 25~35만원 추정',note:'예약 필수'}},
  {t:'20:30',t2:'~',ti:'숙소에서 2차',n:'취침은 내일 산행 생각해서 적당히'}
 ]},
-2:{h:'2일차 · 10/10 토',s:'설악산 금강굴 → 속초중앙시장 → 선영이네물회',rows:[
- {t:'08:00',ti:'기상'},
- {t:'08:50',ti:'숙소 출발',n:'운전자 금주 또는 택시 이용'},
- {t:'09:20',t2:'~10:00',tag:'아침',ti:'시골할머니',n:'순두부·청국장·나물 정식',r:{name:'시골할머니',q:'시골할머니 속초',hours:'08:00~21:00',menu:[['초당순두부','10,000'],['청국장','10,000'],['황태구이정식','18,000'],['곤드레돌솥밥','15,000'],['강원나물밥정식','25,000']],cost:'1인 1~2만원대',note:'정확한 위치는 출발 전 지도에서 확인'}},
- {t:'10:05',ti:'설악동 소공원 도착',n:'만차 시 사설주차장 또는 시내버스 7번'},
- {t:'10:15',t2:'~12:40',tag:'등산',ti:'금강굴 코스',n:'소공원 → 신흥사 → 비선대 → 금강굴',trail:1},
- {t:'12:40',t2:'~14:20',ti:'하산',n:'금강굴 → 비선대 → 소공원'},
- {t:'14:30',ti:'속초중앙시장으로 이동',n:'약 25~30분'},
- {t:'15:00',t2:'~15:50',tag:'점심',ti:'신토불이 감자옹심이',n:'시장 건물 1층 55호',r:{name:'신토불이 감자옹심이',q:'신토불이감자옹심이 속초중앙시장',tel:'033-633-9432',hours:'수요일 휴무 · 16:00 브레이크',menu:[['전통옹심이','12,000'],['들깨옹심이','14,000'],['감자전','10,000'],['오징어순대','16,000']],cost:'5명 약 8~9만원'}},
- {t:'15:50',t2:'~17:00',tag:'쇼핑',ti:'중앙시장 장보기',n:'밤에 먹을 간식 구입',shop:[['현태네튀김','오징어튀김 + 누룽지오징어순대 세트 17,000 · 목 휴무','현태네튀김 속초중앙시장'],['중앙닭강정 본점','09:30~19:30','중앙닭강정 본점 속초'],['강원도막걸리술빵','술빵','강원도막걸리술빵 속초중앙시장'],['마른오징어','시장 건어물 가게','속초중앙시장 마른오징어']]},
- {t:'17:00',ti:'숙소로 출발',n:'약 35분'},
+2:{h:'2일차 · 10/10 토',s:'설악산 금강굴 → 속초중앙시장 → 샤워 → 선영이네물회',rows:[
+ {t:'07:30',ti:'기상',n:'점심을 14시 이전에 먹으려고 30분 앞당김'},
+ {t:'08:10',ti:'숙소 출발',n:'운전자 금주 또는 택시 이용'},
+ {t:'08:40',t2:'~09:20',tag:'아침',ti:'시골할머니',n:'순두부·청국장·나물 정식',r:{name:'시골할머니',q:'시골할머니 속초',hours:'08:00~21:00',menu:[['초당순두부','10,000'],['청국장','10,000'],['황태구이정식','18,000'],['곤드레돌솥밥','15,000'],['강원나물밥정식','25,000']],cost:'1인 1~2만원대',note:'정확한 위치는 출발 전 지도에서 확인'}},
+ {t:'09:25',ti:'설악동 소공원 도착',n:'만차 시 사설주차장 또는 시내버스 7번'},
+ {t:'09:35',t2:'~11:50',tag:'등산',ti:'금강굴 코스 (상행)',n:'소공원 → 신흥사 → 비선대 → 금강굴',trail:1,tl:[['09:35','소공원 출발'],['10:40','비선대 도착 (약 1h05)'],['11:20','금강굴 도착 (약 40분, 급경사 철계단)'],['11:20~11:50','금강굴 휴식·사진']]},
+ {t:'11:50',t2:'~13:30',ti:'하산',n:'금강굴 → 비선대 12:20 → 소공원 13:30',tl:[['12:20','비선대 (하산 약 30분)'],['13:30','소공원 도착 (약 1h10)']]},
+ {t:'13:35',ti:'속초중앙시장으로 이동',n:'약 25~30분 · 점심은 늦어도 14:00 시작'},
+ {t:'14:00',t2:'~14:50',tag:'점심',ti:'신토불이 감자옹심이',n:'시장 건물 1층 55호',r:{name:'신토불이 감자옹심이',q:'신토불이감자옹심이 속초중앙시장',tel:'033-633-9432',hours:'수요일 휴무 · 16:00 브레이크',menu:[['전통옹심이','12,000'],['들깨옹심이','14,000'],['감자전','10,000'],['오징어순대','16,000']],cost:'5명 약 8~9만원'}},
+ {t:'14:50',t2:'~15:50',tag:'쇼핑',ti:'중앙시장 장보기',n:'밤에 먹을 간식 구입',shop:[['현태네튀김','오징어튀김 + 누룽지오징어순대 세트 17,000 · 목 휴무','현태네튀김 속초중앙시장'],['중앙닭강정 본점','09:30~19:30','중앙닭강정 본점 속초'],['강원도막걸리술빵','술빵','강원도막걸리술빵 속초중앙시장'],['마른오징어','시장 건어물 가게','속초중앙시장 마른오징어']]},
+ {t:'15:50',ti:'숙소로 출발',n:'약 35분'},
+ {t:'16:25',t2:'~17:30',tag:'휴식',ti:'숙소 도착 · 샤워 · 휴식',n:'장 본 음식 정리, 샤워 후 저녁 준비'},
+ {t:'17:40',ti:'선영이네물회로 이동',n:'차량 이동 · 소요시간은 출발 전 지도로 확인 (추정 10~15분)'},
  {t:'18:00',t2:'~20:10',tag:'저녁',ti:'선영이네물회',n:'20:15까지 식사 마무리',r:{name:'선영이네물회',q:'선영이네물회 토성로 75',tel:'050-4458-1590',addr:'고성군 토성면 토성로 75',hours:'브레이크 16:00~17:30 · 화 휴무 · 마감 20:50',menu:[['물회류','가격 미확인 — 전화 문의']],cost:'방문 전 가격 확인 권장'}},
  {t:'20:15',ti:'대리운전 호출',n:'조기 호출 권장'},
  {t:'20:30',t2:'~',ti:'시장 음식으로 숙소 2차'}
@@ -161,25 +163,38 @@ function restCard(r){
 function shopCard(s){
   return '<div class="card"><ul class="menu">'+s.map(function(x){return '<li><span><a href="https://map.naver.com/p/search/'+N(x[2])+'" target="_blank" rel="noopener" style="color:var(--accent)">'+esc(x[0])+'</a></span><span style="white-space:normal;text-align:right">'+esc(x[1])+'</span></li>'}).join('')+'</ul></div>';
 }
+function tlist(a){return '<div class="card"><table class="ct">'+a.map(function(x){return '<tr><td style="white-space:nowrap;font-family:IBM Plex Mono,monospace;color:var(--accent)">'+x[0]+'</td><td>'+esc(x[1])+'</td></tr>'}).join('')+'</table></div>'}
 function steps(a){return '<div class="card"><p class="note" style="margin:0">'+a.map(esc).join(' → ')+'</p></div>'}
-var TRAIL='<div class="trail"><div class="svgwrap"><svg viewBox="0 0 520 250" role="img" aria-label="금강굴 코스 개념도: 소공원에서 비선대 3.0km, 비선대에서 금강굴 0.6km">'+
-'<line x1="30" y1="190" x2="490" y2="190" stroke="var(--line)" stroke-width="1"/>'+
-'<path d="M30 190 L110 178 L190 170 L270 158 L350 146 L398 138 L470 52" fill="none" stroke="var(--accent)" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>'+
-'<path d="M398 138 L470 52" fill="none" stroke="var(--warm)" stroke-width="4" stroke-dasharray="2 6" stroke-linecap="round"/>'+
-'<circle cx="30" cy="190" r="7" fill="var(--accent)"/><circle cx="398" cy="138" r="7" fill="var(--accent)"/><circle cx="470" cy="52" r="8" fill="var(--warm)"/>'+
-'<circle cx="190" cy="170" r="5" fill="var(--surface)" stroke="var(--accent)" stroke-width="3"/>'+
-'<g font-family="Noto Sans KR,sans-serif" fill="var(--ink)" font-size="13" font-weight="700">'+
-'<text x="30" y="214" text-anchor="start">소공원</text><text x="190" y="194" text-anchor="middle">신흥사 경유</text><text x="398" y="162" text-anchor="middle">비선대</text><text x="470" y="34" text-anchor="end">금강굴</text></g>'+
-'<g font-family="IBM Plex Mono,monospace" fill="var(--muted)" font-size="12">'+
-'<text x="30" y="230">0 km</text><text x="398" y="178" text-anchor="middle">3.0 km</text><text x="470" y="72" text-anchor="end">3.6 km · 해발 약 600m</text>'+
-'<text x="214" y="132" text-anchor="middle">완만한 길 · 편도 1h~1h20</text><text x="430" y="100" text-anchor="start" fill="var(--warm)">급경사 철계단</text><text x="430" y="114" text-anchor="start" fill="var(--warm)">약 40분</text></g>'+
-'</svg></div><p class="legend">개념도(고도·거리 비례 아님). 비선대부터 금강굴까지가 이 코스의 핵심 구간입니다.</p>'+
+var TRAIL='<div class="trail"><div class="svgwrap"><svg viewBox="0 0 560 330" role="img" aria-label="금강굴 코스 지도: 소공원, 신흥사, 와선대, 비선대, 금강굴 순서. 소공원에서 비선대 3.0km, 비선대에서 금강굴 0.6km">'+
+'<rect x="1" y="1" width="558" height="328" rx="10" fill="var(--soft)" stroke="var(--line)"/>'+
+'<path d="M20 70 C90 40 150 90 230 60 S400 30 540 70" fill="none" stroke="var(--track)" stroke-width="2" opacity=".5"/>'+
+'<path d="M360 235 L410 205 L470 175" fill="none" stroke="var(--track)" stroke-width="5" stroke-linecap="round" opacity=".55"/>'+
+'<text x="480" y="170" font-family="Noto Sans KR,sans-serif" font-size="11" fill="var(--muted)">천불동계곡</text>'+
+'<text x="480" y="184" font-family="Noto Sans KR,sans-serif" font-size="11" fill="var(--muted)">대청봉 방면</text>'+
+'<path d="M60 270 L130 265 L200 258 L270 250 L360 235" fill="none" stroke="var(--accent)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>'+
+'<path d="M360 235 L395 150 L415 95" fill="none" stroke="var(--warm)" stroke-width="6" stroke-linecap="round" stroke-dasharray="1 9"/>'+
+'<g fill="var(--surface)" stroke="var(--accent)" stroke-width="3"><circle cx="130" cy="265" r="6"/><circle cx="270" cy="250" r="6"/></g>'+
+'<circle cx="60" cy="270" r="9" fill="var(--accent)"/><circle cx="360" cy="235" r="9" fill="var(--accent)"/><circle cx="415" cy="95" r="10" fill="var(--warm)"/>'+
+'<rect x="46" y="296" width="28" height="22" rx="4" fill="var(--accent)"/><text x="60" y="312" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="14" font-weight="700" fill="var(--accent-ink)">P</text>'+
+'<g font-family="Noto Sans KR,sans-serif" font-size="13" font-weight="700" fill="var(--ink)">'+
+'<text x="84" y="304">소공원 (출발)</text><text x="130" y="288" text-anchor="middle">신흥사</text><text x="270" y="274" text-anchor="middle">와선대</text>'+
+'<text x="360" y="262" text-anchor="middle">비선대</text><text x="415" y="72" text-anchor="middle">금강굴</text></g>'+
+'<g font-family="IBM Plex Mono,monospace" font-size="12" font-weight="600">'+
+'<rect x="150" y="212" width="176" height="24" rx="6" fill="var(--accent)"/><text x="238" y="228" text-anchor="middle" fill="var(--accent-ink)">3.0km · 편도 1h~1h20</text>'+
+'<rect x="428" y="120" width="116" height="42" rx="6" fill="var(--warm-bg)" stroke="var(--warm)"/><text x="486" y="137" text-anchor="middle" fill="var(--warm)">0.6km · 약 40분</text><text x="486" y="153" text-anchor="middle" fill="var(--warm)">급경사 철계단</text>'+
+'<rect x="432" y="48" width="120" height="24" rx="6" fill="var(--surface)" stroke="var(--line)"/><text x="492" y="64" text-anchor="middle" fill="var(--ink)">해발 약 600m</text>'+
+'<rect x="20" y="20" width="150" height="40" rx="6" fill="var(--surface)" stroke="var(--line)"/><text x="30" y="37" fill="var(--muted)">09:35 출발</text><text x="30" y="53" fill="var(--ink)">13:30 소공원 도착</text>'+
+'</g></svg></div>'+
+'<p class="legend">개념도 (거리·고도 비례 아님). 실선: 완만한 탐방로 / 점선: 비선대~금강굴 급경사 구간. 정확한 지형은 공식 탐방로 지도를 확인하세요.</p>'+
 '<table class="ct"><tr><th>구간</th><th>거리</th><th>소요</th></tr>'+
 '<tr><td>소공원 → 비선대</td><td>3.0km</td><td>1h~1h20</td></tr>'+
 '<tr><td>비선대 → 금강굴</td><td>0.6km</td><td>약 40분</td></tr>'+
 '<tr><td>소공원 → 금강굴 (편도)</td><td>3.6km</td><td>약 2h</td></tr>'+
 '<tr><td>왕복 (체류 포함)</td><td>7.2km</td><td>약 4h</td></tr></table>'+
-'<p class="legend">10월 비선대 입산 통제 14:00. 비 오면 비선대까지만. 금강굴은 원효 수행 전설이 있는 천연 동굴입니다.</p></div>';
+'<div class="btns"><a class="btn primary" href="https://seorak.knps.or.kr/front/portal/visit/visitCourseSubMain.do?parkId=120400&parkNavGb=park&menuNo=7020093" target="_blank" rel="noopener">국립공원공단 설악산 코스 안내</a>'+
+'<a class="btn" href="https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=1576a2d9-527d-43b1-b2fc-968d5f5c0be8" target="_blank" rel="noopener">한국관광공사 금강굴 코스</a>'+
+'<a class="btn" href="https://blogger.pe.kr/1160-seoraksan-geumganggul-cave/" target="_blank" rel="noopener">후기 · 사진</a></div>'+
+'<p class="legend">10월 비선대 입산 통제 14:00. 비 오면 비선대까지만. 금강굴 내부는 촬영 금지. 통제·운영 여부는 출발 전 설악산 관리사무소(033-636-7700)에서 확인하세요.</p></div>';
 
 function render(d){
   var x=D[d],h='<div class="dayhead"><h2>'+x.h+'</h2><p>'+x.s+'</p></div><ol class="tl">';
@@ -189,6 +204,8 @@ function render(d){
     if(r.r)h+=restCard(r.r);
     if(r.shop)h+=shopCard(r.shop);
     if(r.steps)h+=steps(r.steps);
+    if(r.tl&&!r.trail)h+=tlist(r.tl);
+    if(r.trail&&r.tl)h+=tlist(r.tl);
     if(r.trail)h+='<button class="btn primary trailbtn" type="button" aria-expanded="false" data-trail="1">등산로 코스 보기</button><div hidden data-tbox></div>';
     h+='</div></li>';
   });
